@@ -10,7 +10,7 @@ public class BinarySearchTests
     public void BinarySearch_Do_Success(int[] nums, int target, int expected)
     {
         var sut = new BinarySearch();
-        var actual = sut.Do(nums, target);
+        var actual = sut.LinearSearch(nums, target);
         
         Assert.Equal(expected, actual);
     }
