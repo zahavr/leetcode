@@ -15,4 +15,21 @@ public class ReverseString
         }
         return s;
     }
+    
+    public char[] Recursive(char[] s)
+    {
+         Helper(0, s.Length - 1, s);
+
+         return s;
+    }
+
+    private void Helper(int first, int last, char[] str)
+    {
+        if (first >= last)
+        {
+            return;
+        }
+        (str[first], str[last]) = (str[last], str[first]);
+        Helper(first + 1, last - 1, str);
+    }
 }
